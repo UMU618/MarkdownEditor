@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+*.rc                text eol=crlf
+*.slnx              text eol=crlf
+*.vcxproj           text eol=crlf
+*.vcxproj.filters   text eol=crlf
+resource.h          text eol=crlf

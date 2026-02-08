@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "boost-nowide",
+    "ms-gsl",
+    "wil",
+    "wtl"
+  ]
+}

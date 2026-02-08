@@ -1,0 +1,3 @@
+[submodule "src/umutech/dry"]
+	path = src/umutech/dry
+	url = https://github.com/RegameDesk/dry

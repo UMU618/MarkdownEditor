@@ -1,0 +1,3 @@
+vcpkg_installed/
+
+*.vcxproj.user
