@@ -3,5 +3,7 @@ tmp/
 *.bak
 *.tmp
 
+.vscode/
+
 # macOS
 .DS_Store
