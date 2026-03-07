@@ -3,5 +3,5 @@ vcpkg_installed/
 # VS
 .vs/
 bin/
-*.vcxproj.user
 *.aps
+*.vcxproj.user
