@@ -11,7 +11,13 @@ You can open files as preview mode via command line option `--mode=preview`.
 ### 2. Shortcut Keys
 
 - Ctrl+E: Toggle Editor
-- Ctrl+F4: Close Active Document
+- Ctrl+F4/Ctrl+W: Close Active Document
+
+### 3. Note
+
+- Only files encoded in UTF-8 are accepted.
+- Line endings are always LF.
+- Can't open files larger then 4MB.
 
 ## Snapshots
 
