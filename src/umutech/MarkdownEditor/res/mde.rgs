@@ -1,0 +1,25 @@
+HKCR
+{
+	UMUTech.MarkdownEditor
+	{
+		shell
+		{
+			edit = s '&Edit'
+			{
+				command = s '"%MODULE%" "%%1"'
+			}
+			open = s '&Preview'
+			{
+				command = s '"%MODULE%" --mode=preview "%%1"'
+			}
+		}
+	}
+	NoRemove .markdown
+	{
+		val '' = s 'UMUTech.MarkdownEditor'
+	}
+	NoRemove .md
+	{
+		val '' = s 'UMUTech.MarkdownEditor'
+	}
+}

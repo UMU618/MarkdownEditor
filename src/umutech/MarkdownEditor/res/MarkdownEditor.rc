@@ -1,0 +1,444 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TABTOOLBAR          BITMAP                  "tab_toolbar.bmp"
+
+IDR_MAINFRAME           BITMAP                  "toolbar.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_MAINFRAME           REGISTRY                "mde.rgs"
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_TABTOOLBAR TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_SHOW_VIEWS
+    BUTTON      ID_DOCUMENT_CLOSE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "(empty)",                     ID_FILE_MRU_FIRST
+            MENUITEM SEPARATOR
+            MENUITEM "&Clear",                      ID_FILE_RECENTFILES_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Font...",                    ID_EDIT_FONT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit\tCtrl+E",               ID_VIEW_EDIT
+        MENUITEM "&Preview",                    ID_VIEW_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Horizontal Layout",          ID_VIEW_HORIZONTAL_LAYOUT
+        MENUITEM "&Move Splitter",              ID_VIEW_MOVE_SPLITTER
+    END
+    POPUP "&Document"
+    BEGIN
+        MENUITEM "&Close\tCtrl+F4",             ID_DOCUMENT_CLOSE
+        MENUITEM "Close &All",                  ID_DOCUMENT_CLOSE_ALL
+    END
+    POPUP "&Tool"
+    BEGIN
+        POPUP "Theme"
+        BEGIN
+            MENUITEM "&Light",                      ID_THEME_LIGHT
+            MENUITEM "&Dark",                       ID_THEME_DARK
+            MENUITEM "&Green",                      ID_THEME_GREEN
+            MENUITEM "&Yellow",                     ID_THEME_YELLOW
+        END
+        MENUITEM "&Register File Associations", ID_TOOL_REGISTER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MarkdownEditor",       ID_APP_ABOUT
+    END
+END
+
+IDR_TAB_MENU MENU
+BEGIN
+    POPUP "TabHeader"
+    BEGIN
+        MENUITEM "&Close",                      ID_DOCUMENT_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        POPUP "&Open into"
+        BEGIN
+            MENUITEM "Open Containing Folder in &Explorer", ID_OPEN_IN_EXPLORER
+            MENUITEM SEPARATOR
+            MENUITEM "Open in &Notepad",            ID_OPEN_IN_NOTEPAD
+        END
+        MENUITEM SEPARATOR
+        POPUP "Copy to Clipboard"
+        BEGIN
+            MENUITEM "Copy &Full File Path",        ID_COPY_FULL_PATH
+            MENUITEM "Copy File&name",              ID_COPY_FILENAME
+            MENUITEM "Copy &Directory Path",        ID_COPY_DIRECTORY_PATH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "MarkdownEditor.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 147, 109
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "About"
+FONT 9, "Segoe UI", 0, 0, 0x0
+BEGIN
+    CONTROL         "<a href=""https://github.com/UMU618/MarkdownEditor/issues"">Feedback</a>",IDC_SYSLINK_FEEDBACK,
+                    "SysLink",WS_TABSTOP,7,88,60,14
+    DEFPUSHBUTTON   "OK",IDOK,90,88,50,14
+    GROUPBOX        "",IDC_STATIC,7,7,133,74
+    ICON            IDR_MAINFRAME,IDC_STATIC,64,18,20,20
+    CTEXT           "MarkdownEditor",IDC_VERSION,16,48,114,14
+    CTEXT           "(c) Copyright UMUTech 2026",IDC_STATIC,16,64,114,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_F4,          ID_DOCUMENT_CLOSE,      VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "E",            ID_VIEW_EDIT,           VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_DOCUMENT_CLOSE,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "UMUTech"
+            VALUE "FileDescription", "MarkdownEditor"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "MarkdownEditor"
+            VALUE "LegalCopyright", "Copyright 2026"
+            VALUE "OriginalFilename", "MarkdownEditor.exe"
+            VALUE "ProductName", "MarkdownEditor"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_LIGHT          HTML                    "preview.htm"
+
+IDR_HTML_DARK           HTML                    "preview_dark.htm"
+
+IDR_HTML_GREEN          HTML                    "preview_green.htm"
+
+IDR_HTML_YELLOW         HTML                    "preview_yellow.htm"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "MarkdownEditor"
+    IDS_REGISTER            "The requested operation requires elevation. Continue?"
+    IDS_REGISTER_SUCCEEDED  "The file associations has been successfully registered."
+    IDS_UNREGISTER_SUCCEEDED 
+                            "The file associations has been successfully removed."
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_RECENTFILES_CLEAR "Clear all recent files"
+    ID_EDIT_FONT            "Choose font for editor"
+    ID_VIEW_EDIT            "Show edit panel"
+    ID_VIEW_PREVIEW         "Show preview panel"
+    ID_VIEW_HORIZONTAL_LAYOUT "Switch the layout to horizontal or vertical"
+    ID_VIEW_MOVE_SPLITTER   "Move splitter using keyboard"
+    ID_DOCUMENT_CLOSE       "Close active document"
+    ID_DOCUMENT_CLOSE_ALL   "Close all documents"
+    ID_THEME_LIGHT          "Light Theme"
+    ID_THEME_DARK           "Dark Theme"
+    ID_THEME_GREEN          "Green Theme"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOL_REGISTER        "Register File Associations (*.md; *.markdown)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_THEME_YELLOW         "Yellow Theme"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
