@@ -1,14 +1,10 @@
-<html>
-<head>
-<!--base-placeholder-->
-<style type="text/css">
 body {
   font-family:sans-serif;
   font-size:14px;
   line-height:1.6;
   padding-top:10px;
   padding-bottom:10px;
-  background-color:#e6f2cc;
+  background-color:#e6ffed;
   color:#000000;
   padding:30px;
 }
@@ -277,7 +273,7 @@ code,tt {
   padding:0 5px;
   white-space:nowrap;
   border:1px solid #c8e6c8;
-  background-color:#dce301;
+  background-color:#cdffd8;
   border-radius:3px;
 }
 pre code {
@@ -288,7 +284,7 @@ pre code {
   background:transparent;
 }
 .highlight pre {
-  background-color:#dce301;
+  background-color:#cdffd8;
   border:1px solid #a5d6a5;
   font-size:13px;
   line-height:19px;
@@ -297,7 +293,7 @@ pre code {
   border-radius:3px;
 }
 pre {
-  background-color:#dde8c4;
+  background-color:#cdffd8;
   border:1px solid #a5d6a5;
   font-size:13px;
   line-height:19px;
@@ -309,9 +305,3 @@ pre code,pre tt {
   background-color:transparent;
   border:none;
 }
-</style>
-</head>
-<body>
-<!--body-placeholder-->
-</body>
-</html>

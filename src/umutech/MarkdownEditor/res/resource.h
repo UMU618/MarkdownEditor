@@ -7,10 +7,11 @@
 #define IDS_REGISTER                    129
 #define IDS_REGISTER_SUCCEEDED          130
 #define IDS_UNREGISTER_SUCCEEDED        131
-#define IDR_HTML_LIGHT                  201
-#define IDR_HTML_DARK                   202
-#define IDR_HTML_GREEN                  203
-#define IDR_HTML_YELLOW                 204
+#define IDR_HTML                        132
+#define IDR_CSS_LIGHT                   201
+#define IDR_CSS_DARK                    202
+#define IDR_CSS_GREEN                   203
+#define IDR_CSS_YELLOW                  204
 #define IDR_TABTOOLBAR                  221
 #define IDR_TAB_MENU                    222
 #define IDC_SYSLINK_FEEDBACK            1000

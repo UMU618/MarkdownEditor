@@ -267,7 +267,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,1
+ FILEVERSION 1,0,0,2
  PRODUCTVERSION 1,0,0,1
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -285,7 +285,7 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "UMUTech"
             VALUE "FileDescription", "MarkdownEditor"
-            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "FileVersion", "1.0.0.2"
             VALUE "InternalName", "MarkdownEditor"
             VALUE "LegalCopyright", "Copyright 2026"
             VALUE "OriginalFilename", "MarkdownEditor.exe"
@@ -305,13 +305,21 @@ END
 // HTML
 //
 
-IDR_HTML_LIGHT          HTML                    "preview.htm"
+IDR_HTML                HTML                    "preview.htm"
 
-IDR_HTML_DARK           HTML                    "preview_dark.htm"
 
-IDR_HTML_GREEN          HTML                    "preview_green.htm"
+/////////////////////////////////////////////////////////////////////////////
+//
+// CSS
+//
 
-IDR_HTML_YELLOW         HTML                    "preview_yellow.htm"
+IDR_CSS_LIGHT           CSS                     "light.css"
+
+IDR_CSS_DARK            CSS                     "dark.css"
+
+IDR_CSS_GREEN           CSS                     "green.css"
+
+IDR_CSS_YELLOW          CSS                     "yellow.css"
 
 
 /////////////////////////////////////////////////////////////////////////////
