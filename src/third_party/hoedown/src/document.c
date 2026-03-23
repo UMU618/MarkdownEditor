@@ -2312,6 +2312,13 @@ parse_table_header(
 {
 	int pipes;
 	size_t i = 0, col, header_end, under_end;
+	// UMU
+	size_t min_dashes = 3;
+
+	if (HOEDOWN_EXT_GFM & doc->ext_flags) {
+		// UMU: GFM allows 2 dashes
+		min_dashes = 2;
+	}
 
 	pipes = 0;
 	while (i < size && data[i] != '\n')
@@ -2373,7 +2380,7 @@ parse_table_header(
 		if (i < under_end && data[i] != '|' && data[i] != '+')
 			break;
 
-		if (dashes < 3)
+		if (dashes < min_dashes)
 			break;
 
 		i++;
