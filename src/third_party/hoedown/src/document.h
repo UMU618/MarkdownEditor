@@ -39,7 +39,7 @@ typedef enum hoedown_extensions {
 	HOEDOWN_EXT_DISABLE_INDENTED_CODE = (1 << 14),
 
 	/* UMU customization */
-  HOEDOWN_EXT_GFM = (1 << 15)
+	HOEDOWN_EXT_GFM = (1 << 15)
 } hoedown_extensions;
 
 #define HOEDOWN_EXT_BLOCK (\

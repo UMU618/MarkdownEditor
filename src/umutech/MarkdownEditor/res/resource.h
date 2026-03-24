@@ -8,10 +8,13 @@
 #define IDS_REGISTER_SUCCEEDED          130
 #define IDS_UNREGISTER_SUCCEEDED        131
 #define IDR_HTML                        132
+#define ID_EDIT_MODE                    133
+#define ID_FILE_ENCODE                  134
 #define IDR_CSS_LIGHT                   201
 #define IDR_CSS_DARK                    202
 #define IDR_CSS_GREEN                   203
 #define IDR_CSS_YELLOW                  204
+#define IDR_CSS_VSCODE                  205
 #define IDR_TABTOOLBAR                  221
 #define IDR_TAB_MENU                    222
 #define IDC_SYSLINK_FEEDBACK            1000
@@ -29,6 +32,7 @@
 #define ID_THEME_DARK                   32782
 #define ID_THEME_GREEN                  32783
 #define ID_THEME_YELLOW                 32784
+#define ID_THEME_VSCODE                 32785
 #define ID_TOOL_REGISTER                32801
 #define ID_OPEN_IN_EXPLORER             32802
 #define ID_OPEN_IN_NOTEPAD              32803
