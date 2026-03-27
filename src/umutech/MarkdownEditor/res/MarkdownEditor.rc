@@ -78,6 +78,12 @@ BEGIN
     BUTTON      ID_EDIT_COPY
     BUTTON      ID_EDIT_PASTE
     SEPARATOR
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_EDIT_REPEAT
+    BUTTON      ID_EDIT_REPLACE
+    SEPARATOR
+    BUTTON      ID_FORMAT_FONT
+    SEPARATOR
     BUTTON      ID_FILE_PRINT
     BUTTON      ID_APP_ABOUT
 END
@@ -120,12 +126,22 @@ BEGIN
     POPUP "&Edit"
     BEGIN
         MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
         MENUITEM SEPARATOR
         MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
         MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
         MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
         MENUITEM SEPARATOR
-        MENUITEM "&Font...",                    ID_EDIT_FONT
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Font...",                    ID_FORMAT_FONT
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "&Replace\tCtrl+H",            ID_EDIT_REPLACE
     END
     POPUP "&View"
     BEGIN
@@ -134,6 +150,8 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "&Edit\tCtrl+E",               ID_VIEW_EDIT
         MENUITEM "&Preview",                    ID_VIEW_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&SoftBreak",                  ID_VIEW_SOFTBREAK
         MENUITEM SEPARATOR
         MENUITEM "&Horizontal Layout",          ID_VIEW_HORIZONTAL_LAYOUT
         MENUITEM "&Move Splitter",              ID_VIEW_MOVE_SPLITTER
@@ -145,7 +163,13 @@ BEGIN
     END
     POPUP "&Tool"
     BEGIN
-        POPUP "Theme"
+        POPUP "&Renderer"
+        BEGIN
+            MENUITEM "&cmark-gfm",                  ID_RENDERER_CMARK_GFM
+            MENUITEM "&Hoedown",                    ID_RENDERER_HOEDOWN
+            MENUITEM "&MD4C",                       ID_RENDERER_MD4C
+        END
+        POPUP "&Theme"
         BEGIN
             MENUITEM "&Light",                      ID_THEME_LIGHT
             MENUITEM "&Dark",                       ID_THEME_DARK
@@ -153,7 +177,7 @@ BEGIN
             MENUITEM "&Yellow",                     ID_THEME_YELLOW
             MENUITEM "&VSCode",                     ID_THEME_VSCODE
         END
-        MENUITEM "&Register File Associations", ID_TOOL_REGISTER
+        MENUITEM "Register File &Associations", ID_TOOL_REGISTER
     END
     POPUP "&Help"
     BEGIN
@@ -166,6 +190,12 @@ BEGIN
     POPUP "TabHeader"
     BEGIN
         MENUITEM "&Close",                      ID_DOCUMENT_CLOSE
+        POPUP "Close Multiple &Tabs"
+        BEGIN
+            MENUITEM "Close All BUT &This",         ID_TABHEADER_CLOSE_OTHERS
+            MENUITEM "Close All &Unchanged",        ID_TABHEADER_CLOSE_UNCHANGED
+        END
+        MENUITEM SEPARATOR
         MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
         MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
         POPUP "&Open into"
@@ -175,7 +205,7 @@ BEGIN
             MENUITEM "Open in &Notepad",            ID_OPEN_IN_NOTEPAD
         END
         MENUITEM SEPARATOR
-        POPUP "Copy to Clipboard"
+        POPUP "&Copy to Clipboard"
         BEGIN
             MENUITEM "Copy &Full File Path",        ID_COPY_FULL_PATH
             MENUITEM "Copy File&name",              ID_COPY_FILENAME
@@ -211,7 +241,7 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,90,88,50,14
     GROUPBOX        "",IDC_STATIC,7,7,133,74
     ICON            IDR_MAINFRAME,IDC_STATIC,64,18,20,20
-    CTEXT           "MarkdownEditor",IDC_VERSION,16,48,114,14
+    CTEXT           "MarkdownEditor (GFM)",IDC_VERSION,16,48,114,14
     CTEXT           "(c) Copyright UMUTech 2026",IDC_STATIC,16,64,114,14
 END
 
@@ -243,12 +273,15 @@ END
 IDR_MAINFRAME ACCELERATORS
 BEGIN
     VK_F4,          ID_DOCUMENT_CLOSE,      VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_DOCUMENT_CLOSE,      VIRTKEY, CONTROL, NOINVERT
     "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
     VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
     "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
     "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
     VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
     VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
     "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
     "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
@@ -258,7 +291,8 @@ BEGIN
     VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
     VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
     "E",            ID_VIEW_EDIT,           VIRTKEY, CONTROL, NOINVERT
-    "W",            ID_DOCUMENT_CLOSE,      VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_REDO,           VIRTKEY, SHIFT, CONTROL, NOINVERT
 END
 
 
@@ -429,27 +463,35 @@ END
 STRINGTABLE
 BEGIN
     ID_FILE_RECENTFILES_CLEAR "Clear all recent files"
-    ID_EDIT_FONT            "Choose font for editor"
     ID_VIEW_EDIT            "Show edit panel"
     ID_VIEW_PREVIEW         "Show preview panel"
+    ID_VIEW_SOFTBREAK       "Whether to render softbreak elements as hard line breaks"
     ID_VIEW_HORIZONTAL_LAYOUT "Switch the layout to horizontal or vertical"
     ID_VIEW_MOVE_SPLITTER   "Move splitter using keyboard"
     ID_DOCUMENT_CLOSE       "Close active document"
     ID_DOCUMENT_CLOSE_ALL   "Close all documents"
+    ID_RENDERER_CMARK_GFM   "https://github.com/github/cmark-gfm"
+    ID_RENDERER_HOEDOWN     "https://github.com/UMU618/MarkdownEditor/tree/main/src/third_party/hoedown"
+    ID_RENDERER_MD4C        "https://github.com/mity/md4c"
+END
+
+STRINGTABLE
+BEGIN
     ID_THEME_LIGHT          "Light Theme"
     ID_THEME_DARK           "Dark Theme"
     ID_THEME_GREEN          "Green Theme"
+    ID_THEME_YELLOW         "Yellow Theme"
+    ID_THEME_VSCODE         "VSCode Light Theme"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FORMAT_FONT          "Choose font for editor"
 END
 
 STRINGTABLE
 BEGIN
     ID_TOOL_REGISTER        "Register File Associations (*.md; *.markdown)"
-END
-
-STRINGTABLE
-BEGIN
-    ID_THEME_YELLOW         "Yellow Theme"
-    ID_THEME_VSCODE         "VSCode Light Theme"
 END
 
 #endif    // English (United States) resources
