@@ -169,6 +169,8 @@ BEGIN
             MENUITEM "&Hoedown",                    ID_RENDERER_HOEDOWN
             MENUITEM "&MD4C",                       ID_RENDERER_MD4C
         END
+        MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
+        MENUITEM SEPARATOR
         POPUP "&Theme"
         BEGIN
             MENUITEM "&Light",                      ID_THEME_LIGHT

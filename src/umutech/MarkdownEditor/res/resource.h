@@ -36,21 +36,22 @@
 #define ID_THEME_GREEN                  32793
 #define ID_THEME_YELLOW                 32794
 #define ID_THEME_VSCODE                 32795
-#define ID_TOOL_REGISTER                32801
-#define ID_OPEN_IN_EXPLORER             32802
-#define ID_OPEN_IN_NOTEPAD              32803
-#define ID_COPY_FULL_PATH               32804
-#define ID_COPY_FILENAME                32805
-#define ID_COPY_DIRECTORY_PATH          32806
-#define ID_TABHEADER_CLOSE_OTHERS       32807
-#define ID_TABHEADER_CLOSE_UNCHANGED    32808
+#define ID_TOOL_AUTOLINKS               32801
+#define ID_TOOL_REGISTER                32802
+#define ID_OPEN_IN_EXPLORER             32811
+#define ID_OPEN_IN_NOTEPAD              32812
+#define ID_COPY_FULL_PATH               32813
+#define ID_COPY_FILENAME                32814
+#define ID_COPY_DIRECTORY_PATH          32815
+#define ID_TABHEADER_CLOSE_OTHERS       32816
+#define ID_TABHEADER_CLOSE_UNCHANGED    32817
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        223
-#define _APS_NEXT_COMMAND_VALUE         32809
+#define _APS_NEXT_COMMAND_VALUE         32818
 #define _APS_NEXT_CONTROL_VALUE         1002
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
