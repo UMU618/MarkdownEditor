@@ -51,6 +51,12 @@
     <ClInclude Include="src\edit_panel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\web_view2_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\theme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
@@ -84,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\edit_panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\web_view2_window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -122,6 +131,8 @@
     <None Include="res\yellow.css">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="res\vscode.css" />
+    <None Include="res\vscode.css">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

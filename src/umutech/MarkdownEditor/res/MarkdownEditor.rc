@@ -22,6 +22,141 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// Menu
+//
+
+IDR_TOOLBAR_MENU MENU
+BEGIN
+    POPUP "ToolbarMenu"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Lock Toolbars",              ID_VIEW_LOCK_TOOLBARS
+    END
+END
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        POPUP "Recent &Files"
+        BEGIN
+            MENUITEM "(empty)",                     ID_FILE_MRU_FIRST
+            MENUITEM SEPARATOR
+            MENUITEM "&Clear",                      ID_FILE_RECENTFILES_CLEAR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Font...",                    ID_FORMAT_FONT
+    END
+    POPUP "&Search"
+    BEGIN
+        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "&Replace\tCtrl+H",            ID_EDIT_REPLACE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Lock Toolbars",              ID_VIEW_LOCK_TOOLBARS
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit\tCtrl+E",               ID_VIEW_EDIT
+        MENUITEM "&Preview",                    ID_VIEW_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&SoftBreak",                  ID_VIEW_SOFTBREAK
+        MENUITEM SEPARATOR
+        MENUITEM "&Horizontal Layout",          ID_VIEW_HORIZONTAL_LAYOUT
+        MENUITEM "&Move Splitter",              ID_VIEW_MOVE_SPLITTER
+    END
+    POPUP "&Document"
+    BEGIN
+        MENUITEM "&Close\tCtrl+F4",             ID_DOCUMENT_CLOSE
+        MENUITEM "Close &All",                  ID_DOCUMENT_CLOSE_ALL
+    END
+    POPUP "&Tool"
+    BEGIN
+        POPUP "&Renderer"
+        BEGIN
+            MENUITEM "&cmark-gfm",                  ID_RENDERER_CMARK_GFM
+            MENUITEM "&Hoedown",                    ID_RENDERER_HOEDOWN
+            MENUITEM "&MD4C",                       ID_RENDERER_MD4C
+        END
+        MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
+        MENUITEM SEPARATOR
+        POPUP "&Theme"
+        BEGIN
+            MENUITEM "&Light",                      ID_THEME_LIGHT
+            MENUITEM "&Dark",                       ID_THEME_DARK
+            MENUITEM "&Green",                      ID_THEME_GREEN
+            MENUITEM "&Yellow",                     ID_THEME_YELLOW
+            MENUITEM "&VSCode",                     ID_THEME_VSCODE
+        END
+        MENUITEM "Register File &Associations", ID_TOOL_REGISTER
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About MarkdownEditor",       ID_APP_ABOUT
+    END
+END
+
+IDR_TAB_MENU MENU
+BEGIN
+    POPUP "TabHeader"
+    BEGIN
+        MENUITEM "&Close",                      ID_DOCUMENT_CLOSE
+        POPUP "Close Multiple &Tabs"
+        BEGIN
+            MENUITEM "Close All BUT &This",         ID_TABHEADER_CLOSE_OTHERS
+            MENUITEM "Close All &Unchanged",        ID_TABHEADER_CLOSE_UNCHANGED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        POPUP "&Open into"
+        BEGIN
+            MENUITEM "Open Containing Folder in &Explorer", ID_OPEN_IN_EXPLORER
+            MENUITEM SEPARATOR
+            MENUITEM "Open in &Notepad",            ID_OPEN_IN_NOTEPAD
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Copy to Clipboard"
+        BEGIN
+            MENUITEM "Copy &Full File Path",        ID_COPY_FULL_PATH
+            MENUITEM "Copy File&name",              ID_COPY_FILENAME
+            MENUITEM "Copy &Directory Path",        ID_COPY_DIRECTORY_PATH
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // Bitmap
 //
 
@@ -97,128 +232,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Menu
-//
-
-IDR_MAINFRAME MENU
-BEGIN
-    POPUP "&File"
-    BEGIN
-        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
-        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
-        MENUITEM SEPARATOR
-        POPUP "Recent &Files"
-        BEGIN
-            MENUITEM "(empty)",                     ID_FILE_MRU_FIRST
-            MENUITEM SEPARATOR
-            MENUITEM "&Clear",                      ID_FILE_RECENTFILES_CLEAR
-        END
-        MENUITEM SEPARATOR
-        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
-        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
-        MENUITEM SEPARATOR
-        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
-        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
-        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
-        MENUITEM SEPARATOR
-        MENUITEM "E&xit",                       ID_APP_EXIT
-    END
-    POPUP "&Edit"
-    BEGIN
-        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
-        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
-        MENUITEM SEPARATOR
-        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
-        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
-        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
-        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
-        MENUITEM SEPARATOR
-        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
-        MENUITEM SEPARATOR
-        MENUITEM "&Font...",                    ID_FORMAT_FONT
-    END
-    POPUP "&Search"
-    BEGIN
-        MENUITEM "&Find\tCtrl+F",               ID_EDIT_FIND
-        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
-        MENUITEM "&Replace\tCtrl+H",            ID_EDIT_REPLACE
-    END
-    POPUP "&View"
-    BEGIN
-        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
-        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
-        MENUITEM SEPARATOR
-        MENUITEM "&Edit\tCtrl+E",               ID_VIEW_EDIT
-        MENUITEM "&Preview",                    ID_VIEW_PREVIEW
-        MENUITEM SEPARATOR
-        MENUITEM "&SoftBreak",                  ID_VIEW_SOFTBREAK
-        MENUITEM SEPARATOR
-        MENUITEM "&Horizontal Layout",          ID_VIEW_HORIZONTAL_LAYOUT
-        MENUITEM "&Move Splitter",              ID_VIEW_MOVE_SPLITTER
-    END
-    POPUP "&Document"
-    BEGIN
-        MENUITEM "&Close\tCtrl+F4",             ID_DOCUMENT_CLOSE
-        MENUITEM "Close &All",                  ID_DOCUMENT_CLOSE_ALL
-    END
-    POPUP "&Tool"
-    BEGIN
-        POPUP "&Renderer"
-        BEGIN
-            MENUITEM "&cmark-gfm",                  ID_RENDERER_CMARK_GFM
-            MENUITEM "&Hoedown",                    ID_RENDERER_HOEDOWN
-            MENUITEM "&MD4C",                       ID_RENDERER_MD4C
-        END
-        MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
-        MENUITEM SEPARATOR
-        POPUP "&Theme"
-        BEGIN
-            MENUITEM "&Light",                      ID_THEME_LIGHT
-            MENUITEM "&Dark",                       ID_THEME_DARK
-            MENUITEM "&Green",                      ID_THEME_GREEN
-            MENUITEM "&Yellow",                     ID_THEME_YELLOW
-            MENUITEM "&VSCode",                     ID_THEME_VSCODE
-        END
-        MENUITEM "Register File &Associations", ID_TOOL_REGISTER
-    END
-    POPUP "&Help"
-    BEGIN
-        MENUITEM "&About MarkdownEditor",       ID_APP_ABOUT
-    END
-END
-
-IDR_TAB_MENU MENU
-BEGIN
-    POPUP "TabHeader"
-    BEGIN
-        MENUITEM "&Close",                      ID_DOCUMENT_CLOSE
-        POPUP "Close Multiple &Tabs"
-        BEGIN
-            MENUITEM "Close All BUT &This",         ID_TABHEADER_CLOSE_OTHERS
-            MENUITEM "Close All &Unchanged",        ID_TABHEADER_CLOSE_UNCHANGED
-        END
-        MENUITEM SEPARATOR
-        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
-        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
-        POPUP "&Open into"
-        BEGIN
-            MENUITEM "Open Containing Folder in &Explorer", ID_OPEN_IN_EXPLORER
-            MENUITEM SEPARATOR
-            MENUITEM "Open in &Notepad",            ID_OPEN_IN_NOTEPAD
-        END
-        MENUITEM SEPARATOR
-        POPUP "&Copy to Clipboard"
-        BEGIN
-            MENUITEM "Copy &Full File Path",        ID_COPY_FULL_PATH
-            MENUITEM "Copy File&name",              ID_COPY_FILENAME
-            MENUITEM "Copy &Directory Path",        ID_COPY_DIRECTORY_PATH
-        END
-    END
-END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // Icon
 //
 
@@ -238,13 +251,14 @@ EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "About"
 FONT 9, "Segoe UI", 0, 0, 0x0
 BEGIN
-    CONTROL         "<a href=""https://github.com/UMU618/MarkdownEditor/issues"">Feedback</a>",IDC_SYSLINK_FEEDBACK,
+    CONTROL         "<a href=""https://github.com/UMU618/MarkdownEditor2/issues"">Feedback</a>",IDC_SYSLINK_FEEDBACK,
                     "SysLink",WS_TABSTOP,7,88,60,14
     DEFPUSHBUTTON   "OK",IDOK,90,88,50,14
-    GROUPBOX        "",IDC_STATIC,7,7,133,74
+    GROUPBOX        "",IDC_STATIC,7,7,133,66
     ICON            IDR_MAINFRAME,IDC_STATIC,64,18,20,20
-    CTEXT           "MarkdownEditor (GFM)",IDC_VERSION,16,48,114,14
-    CTEXT           "(c) Copyright UMUTech 2026",IDC_STATIC,16,64,114,14
+    CTEXT           "MarkdownEditor (GFM)",IDC_VERSION,16,40,114,14
+    CTEXT           "(c) Copyright UMUTech 2026",IDC_STATIC,16,56,114,14
+    LTEXT           "HTML Renderer: MSHTML",IDC_HTML_RENDERER,7,77,133,8
 END
 
 
