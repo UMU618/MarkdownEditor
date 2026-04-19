@@ -3,6 +3,7 @@
 // Used by MarkdownEditor.rc
 //
 #define IDD_ABOUTBOX                    100
+#define IDD_DOCUMENTS                   101
 #define IDR_MAINFRAME                   128
 #define IDS_REGISTER                    129
 #define IDS_REGISTER_SUCCEEDED          130
@@ -21,6 +22,7 @@
 #define IDC_SYSLINK_FEEDBACK            1000
 #define IDC_VERSION                     1001
 #define IDC_HTML_RENDERER               1002
+#define IDC_LIST                        1003
 #define ID_FILE_RECENTFILES_CLEAR       32772
 #define ID_VIEW_EDIT                    32773
 #define ID_VIEW_PREVIEW                 32774
@@ -55,7 +57,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        224
 #define _APS_NEXT_COMMAND_VALUE         32819
-#define _APS_NEXT_CONTROL_VALUE         1003
+#define _APS_NEXT_CONTROL_VALUE         1004
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
