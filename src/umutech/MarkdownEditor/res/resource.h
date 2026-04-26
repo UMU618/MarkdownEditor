@@ -50,13 +50,15 @@
 #define ID_TABHEADER_CLOSE_OTHERS       32816
 #define ID_TABHEADER_CLOSE_UNCHANGED    32817
 #define ID_VIEW_LOCK_TOOLBARS           32818
+#define ID_OPEN_IN_CMD                  32819
+#define ID_OPEN_IN_PWSH                 32820
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        224
-#define _APS_NEXT_COMMAND_VALUE         32819
+#define _APS_NEXT_COMMAND_VALUE         32821
 #define _APS_NEXT_CONTROL_VALUE         1004
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

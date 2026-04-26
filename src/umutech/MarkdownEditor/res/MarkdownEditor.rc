@@ -141,6 +141,8 @@ BEGIN
         POPUP "&Open into"
         BEGIN
             MENUITEM "Open Containing Folder in &Explorer", ID_OPEN_IN_EXPLORER
+            MENUITEM "Open Containing Folder in &cmd", ID_OPEN_IN_CMD
+            MENUITEM "Open Containing Folder in &pwsh", ID_OPEN_IN_PWSH
             MENUITEM SEPARATOR
             MENUITEM "Open in &Notepad",            ID_OPEN_IN_NOTEPAD
         END
