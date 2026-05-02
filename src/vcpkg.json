@@ -1,7 +1,11 @@
 {
   "dependencies": [
+    "blake3",
     "boost-nowide",
+    "cmark-gfm",
+    "md4c",
     "ms-gsl",
+    "simdutf",
     "wil",
     "wtl"
   ]
