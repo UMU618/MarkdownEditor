@@ -2,7 +2,10 @@
   "dependencies": [
     "blake3",
     "boost-nowide",
+    "boost-timer",
     "cmark-gfm",
+    "discount",
+    "maddy",
     "md4c",
     "ms-gsl",
     "simdutf",
