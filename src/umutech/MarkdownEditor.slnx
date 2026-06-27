@@ -1,9 +1,10 @@
 <Solution>
   <Configurations>
     <BuildType Name="Debug" />
-    <BuildType Name="MTRelease" />
     <BuildType Name="MTRelease_MSHTML" />
     <BuildType Name="MTRelease_WB" />
+    <BuildType Name="MTRelease_WebView2" />
+    <BuildType Name="MTRelease_Wine" />
     <BuildType Name="Release" />
     <Platform Name="ARM64" />
     <Platform Name="x64" />
@@ -12,10 +13,13 @@
   <Project Path="Hoedown/Hoedown.vcxproj" Id="78ddacc3-19eb-401e-8e1a-c59aba4e6166">
     <BuildType Solution="MTRelease_MSHTML|*" Project="MTRelease" />
     <BuildType Solution="MTRelease_WB|*" Project="MTRelease" />
+    <BuildType Solution="MTRelease_WebView2|*" Project="MTRelease" />
+    <BuildType Solution="MTRelease_Wine|*" Project="MTRelease" />
   </Project>
   <Project Path="MarkdownEditor/MarkdownEditor.vcxproj" Id="d13d03a8-503e-4838-b728-48c7e90ae420">
     <BuildType Solution="MTRelease_MSHTML|*" Project="MSHTML" />
     <BuildType Solution="MTRelease_WB|*" Project="WebBrowser" />
-    <BuildType Solution="MTRelease|*" Project="WebView2" />
+    <BuildType Solution="MTRelease_WebView2|*" Project="WebView2" />
+    <BuildType Solution="MTRelease_Wine|*" Project="Wine" />
   </Project>
 </Solution>

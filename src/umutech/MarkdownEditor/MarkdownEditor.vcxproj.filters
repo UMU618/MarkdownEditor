@@ -57,6 +57,12 @@
     <ClInclude Include="src\theme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="documents_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\base_directory_dialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
@@ -93,6 +99,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\web_view2_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\documents_dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\base_directory_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

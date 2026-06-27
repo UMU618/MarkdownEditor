@@ -19,10 +19,13 @@
 #define IDR_TABTOOLBAR                  221
 #define IDR_TAB_MENU                    222
 #define IDR_TOOLBAR_MENU                223
+#define IDD_BASE_DIRECTORY              224
 #define IDC_SYSLINK_FEEDBACK            1000
 #define IDC_VERSION                     1001
 #define IDC_HTML_RENDERER               1002
 #define IDC_LIST                        1003
+#define IDC_EDIT_BASE_DIRECTORY         1004
+#define IDC_BROWSE                      1005
 #define ID_FILE_RECENTFILES_CLEAR       32772
 #define ID_VIEW_EDIT                    32773
 #define ID_VIEW_PREVIEW                 32774
@@ -54,14 +57,15 @@
 #define ID_OPEN_IN_PWSH                 32820
 #define ID_VIEW_SYNCHRONOUSSCROLLING    32821
 #define ID_VIEW_MENUBAR                 32822
+#define ID_SET_BASE_DIRECTORY           32823
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        224
-#define _APS_NEXT_COMMAND_VALUE         32823
-#define _APS_NEXT_CONTROL_VALUE         1004
+#define _APS_NEXT_RESOURCE_VALUE        225
+#define _APS_NEXT_COMMAND_VALUE         32824
+#define _APS_NEXT_CONTROL_VALUE         1006
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
