@@ -57,10 +57,10 @@
     <ClInclude Include="src\theme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="documents_dialog.h">
+    <ClInclude Include="src\base_directory_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\base_directory_dialog.h">
+    <ClInclude Include="src\documents_dialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

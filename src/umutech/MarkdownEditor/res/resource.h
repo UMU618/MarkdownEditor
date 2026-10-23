@@ -26,6 +26,7 @@
 #define IDC_LIST                        1003
 #define IDC_EDIT_BASE_DIRECTORY         1004
 #define IDC_BROWSE                      1005
+#define IDC_PARENT                      1006
 #define ID_FILE_RECENTFILES_CLEAR       32772
 #define ID_VIEW_EDIT                    32773
 #define ID_VIEW_PREVIEW                 32774

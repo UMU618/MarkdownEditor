@@ -6,6 +6,7 @@
 #define _WIN32_WINNT 0x0601
 #define _WIN32_IE 0x0700
 
+#include <algorithm>
 #include <cassert>
 #include <cstdlib>
 #include <iostream>

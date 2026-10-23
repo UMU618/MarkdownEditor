@@ -211,6 +211,35 @@ rndr_linebreak(hoedown_buffer *ob, const hoedown_renderer_data *data)
 	return 1;
 }
 
+static char* generate_toc(const hoedown_buffer* content) {
+  if (!content || content->size == 0) {
+    return NULL;
+  }
+  // Generate a unique ID for the header based on its content
+  // For simplicity, we'll just use the content itself as the ID
+  // In a real implementation, you might want to sanitize this and ensure
+  // uniqueness
+  char* id = (char*)malloc(content->size + 1);
+  if (id) {
+    size_t p = 0;
+    for (size_t i = 0; i < content->size; ++i) {
+      char c = content->data[i];
+      if (!__isascii(c)) {
+        continue;
+      }
+      if (isspace(c)) {
+        id[p++] = '-';
+      } else if (isupper(c)) {
+        id[p++] = tolower(c);
+      } else if (isalnum(c) || c == '-' || c == '_') {
+        id[p++] = c;
+      }
+    }
+    id[p] = '\0';
+  }
+  return id;
+}
+
 static void
 rndr_header(hoedown_buffer *ob, const hoedown_buffer *content, int level, const hoedown_renderer_data *data)
 {
@@ -219,10 +248,18 @@ rndr_header(hoedown_buffer *ob, const hoedown_buffer *content, int level, const 
 	if (ob->size)
 		hoedown_buffer_putc(ob, '\n');
 
-	if (level <= state->toc_data.nesting_level)
-		hoedown_buffer_printf(ob, "<h%d id=\"toc_%d\">", level, state->toc_data.header_count++);
-	else
+	if (level <= state->toc_data.nesting_level) {
+		char* toc = generate_toc(content);
+		if (toc) {
+			hoedown_buffer_printf(ob, "<h%d id=\"%s\">", level, toc);
+			free(toc);
+		}
+		else {
+			hoedown_buffer_printf(ob, "<h%d id=\"toc_%d\">", level, state->toc_data.header_count++);
+		}
+	} else {
 		hoedown_buffer_printf(ob, "<h%d>", level);
+	}
 
 	if (content) hoedown_buffer_put(ob, content->data, content->size);
 	hoedown_buffer_printf(ob, "</h%d>\n", level);

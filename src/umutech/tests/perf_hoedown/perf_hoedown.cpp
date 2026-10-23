@@ -1,12 +1,14 @@
-﻿#include <iostream>
-#include <string>
+﻿#include <string>
 
+#include <boost/nowide/iostream.hpp>
 #include <boost/timer/timer.hpp>
 
 #include "third_party/hoedown/src/document.h"
 #include "third_party/hoedown/src/html.h"
 
 #include "umutech/tests/utilities/file.h"
+
+namespace nw = boost::nowide;
 
 std::string markdown2html_hoedown(const std::string& markdown) {
   const size_t kInputUnit{1024};
@@ -40,11 +42,11 @@ int main(int argc, const char* argv[]) {
   if (argc < 2) {
     return EXIT_FAILURE;
   }
-  std::cout << "Hoedown Performance Test\n";
-  std::cout << "========================\n\n";
+  nw::cout << "Hoedown Performance Test\n";
+  nw::cout << "========================\n\n";
 
   std::string markdown_content = read_file(argv[1]);
-  std::cout << "Input file size: " << markdown_content.size() << " bytes\n\n";
+  nw::cout << "Input file size: " << markdown_content.size() << " bytes\n\n";
 
   std::string html;
   {
@@ -52,8 +54,10 @@ int main(int argc, const char* argv[]) {
     html = markdown2html_hoedown(markdown_content);
   }
 
-  std::cout << "\nOutput HTML size: " << html.size() << " bytes\n";
-  // std::cout << html;
+  nw::cout << "\nOutput HTML size: " << html.size() << " bytes\n";
+#if _DEBUG
+  nw::cout << html;
+#endif
 
   return 0;
 }
