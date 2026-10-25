@@ -1,9 +1,5 @@
 # UMUTech.MarkdownEditor
 
-## Deprecation notice
-
-This repo has been superseded by [UMU618/MarkdownEditor2](https://github.com/UMU618/MarkdownEditor2). This repo will no longer receive updates. Official updates will be located there from now on.
-
 ## Usage
 
 This is a green software that you can freely copy and use anywhere.
@@ -24,9 +20,8 @@ By passing the "--singleton" option, the instance can be set to the singleton mo
 ### 3. Note
 
 - Only files encoded in UTF-8 are accepted.
-- Line endings are always LF.
+- Line endings are **always LF**. CRLF will be replaced with LF. This means that if the current format is CRLF, a `*` flag will be added on tab header upon opening, indicating that the document has been modified.
 - Can't open files larger then 4MB.
-- This software uses the outdated MSHTML control, which has poor compatibility. You should use [UMU618/MarkdownEditor2](https://github.com/UMU618/MarkdownEditor2), as it utilizes the modern [WebView2](https://github.com/MicrosoftEdge/WebView2Samples).
 
 ## Snapshots
 
