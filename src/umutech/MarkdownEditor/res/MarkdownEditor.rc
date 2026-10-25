@@ -259,14 +259,14 @@ EXSTYLE WS_EX_CONTEXTHELP
 CAPTION "About"
 FONT 9, "Segoe UI", 0, 0, 0x0
 BEGIN
-    CONTROL         "<a href=""https://github.com/UMU618/MarkdownEditor2/issues"">Feedback</a>",IDC_SYSLINK_FEEDBACK,
+    CONTROL         "<a href=""https://github.com/UMU618/MarkdownEditor/issues"">Feedback</a>",IDC_SYSLINK_FEEDBACK,
                     "SysLink",WS_TABSTOP,7,88,60,14
     DEFPUSHBUTTON   "OK",IDOK,90,88,50,14
     GROUPBOX        "",IDC_STATIC,7,7,133,66
     ICON            IDR_MAINFRAME,IDC_STATIC,64,18,20,20
     CTEXT           "MarkdownEditor (GFM)",IDC_VERSION,16,40,114,14
     CTEXT           "(c) Copyright UMUTech 2026",IDC_STATIC,16,56,114,14
-    LTEXT           "HTML Renderer: MSHTML",IDC_HTML_RENDERER,7,77,133,8
+    LTEXT           "HTML Renderer: WebBrowser",IDC_HTML_RENDERER,7,77,133,8
 END
 
 IDD_DOCUMENTS DIALOGEX 0, 0, 342, 195
@@ -365,7 +365,7 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,2
+ FILEVERSION 1,0,0,3
  PRODUCTVERSION 1,0,0,1
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
@@ -383,7 +383,7 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "UMUTech"
             VALUE "FileDescription", "MarkdownEditor"
-            VALUE "FileVersion", "1.0.0.2"
+            VALUE "FileVersion", "1.0.0.3"
             VALUE "InternalName", "MarkdownEditor"
             VALUE "LegalCopyright", "Copyright 2026"
             VALUE "OriginalFilename", "MarkdownEditor.exe"
