@@ -1,14 +1,18 @@
 # UMUTech.MarkdownEditor
 
-## Usage
+## Intro
+
+**MarkdownEditor** - a lightweight Markdown editor
 
 This is a green software that you can freely copy and use anywhere.
+
+It can also be installed through the Microsoft Store: <https://apps.microsoft.com/detail/9PNJPXWFBP94>
 
 ### 1. Command Line Options
 
 You can open files as preview mode via command line option `--mode=preview`.
 
-By passing the "--singleton" option, the instance can be set to the singleton mode. In this case, any new instances opened later will activate this instance and then exit.
+By passing the `--singleton` option, the instance can be set to the singleton mode. In this case, any new instances opened later will activate this instance and then exit.
 
 ### 2. Shortcut Keys
 
