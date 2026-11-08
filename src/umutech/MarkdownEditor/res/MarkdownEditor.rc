@@ -109,7 +109,7 @@ BEGIN
         POPUP "&Renderer"
         BEGIN
             MENUITEM "&cmark-gfm",                  ID_RENDERER_CMARK_GFM
-            MENUITEM "&Hoedown",                    ID_RENDERER_HOEDOWN
+            MENUITEM "&hoextdown",                  ID_RENDERER_HOEDOWN
             MENUITEM "&MD4C",                       ID_RENDERER_MD4C
         END
         MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
@@ -200,6 +200,7 @@ END
 
 3 TEXTINCLUDE 
 BEGIN
+    "#include ""MarkdownEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
     "\0"
 END
 
@@ -361,45 +362,6 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// Version
-//
-
-VS_VERSION_INFO VERSIONINFO
- FILEVERSION 1,0,0,3
- PRODUCTVERSION 1,0,0,1
- FILEFLAGSMASK 0x3fL
-#ifdef _DEBUG
- FILEFLAGS 0x1L
-#else
- FILEFLAGS 0x0L
-#endif
- FILEOS 0x4L
- FILETYPE 0x2L
- FILESUBTYPE 0x0L
-BEGIN
-    BLOCK "StringFileInfo"
-    BEGIN
-        BLOCK "040904b0"
-        BEGIN
-            VALUE "CompanyName", "UMUTech"
-            VALUE "FileDescription", "MarkdownEditor"
-            VALUE "FileVersion", "1.0.0.3"
-            VALUE "InternalName", "MarkdownEditor"
-            VALUE "LegalCopyright", "Copyright 2026"
-            VALUE "OriginalFilename", "MarkdownEditor.exe"
-            VALUE "ProductName", "MarkdownEditor"
-            VALUE "ProductVersion", "1, 0, 0, 1"
-        END
-    END
-    BLOCK "VarFileInfo"
-    BEGIN
-        VALUE "Translation", 0x409, 1200
-    END
-END
-
-
-/////////////////////////////////////////////////////////////////////////////
-//
 // HTML
 //
 
@@ -544,7 +506,7 @@ BEGIN
     ID_DOCUMENT_CLOSE       "Close active document"
     ID_DOCUMENT_CLOSE_ALL   "Close all documents"
     ID_RENDERER_CMARK_GFM   "https://github.com/github/cmark-gfm"
-    ID_RENDERER_HOEDOWN     "https://github.com/UMU618/MarkdownEditor/tree/main/src/third_party/hoedown"
+    ID_RENDERER_HOEDOWN     "https://github.com/kjdev/hoextdown"
     ID_RENDERER_MD4C        "https://github.com/mity/md4c"
 END
 
@@ -570,10 +532,24 @@ END
 
 STRINGTABLE
 BEGIN
+    ID_VIEW_SYNCHRONOUSSCROLLING 
+                            "When the scroll edit panel, the preview panel is scrolled synchronously."
     ID_VIEW_MENUBAR         "Show or hide the menu bar\nToggle MenuBar"
+    ID_SET_BASE_DIRECTORY   "Set base directory for this document"
 END
 
 #endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "MarkdownEditor.rc2"  // non-Microsoft Visual C++ edited resources
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
 

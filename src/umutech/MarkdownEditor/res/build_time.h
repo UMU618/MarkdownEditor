@@ -1,0 +1,4 @@
+#define BUILD_YEAR 2026
+#define BUILD_MONTH 11
+#define BUILD_DAY 8
+#define BUILD_HOUR 17
