@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\third_party\hoextdown\src\autolink.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\buffer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\context_test.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\document.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\escape.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\hash.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\html.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\html_blocks.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\html_smartypants.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\html5_blocks.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\stack.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\hoextdown\src\version.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\third_party\hoextdown\src\autolink.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\buffer.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\context_test.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\document.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\escape.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\hash.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\html.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\stack.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\hoextdown\src\version.h">
+      <Filter>h</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

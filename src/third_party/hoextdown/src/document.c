@@ -3163,8 +3163,8 @@ parse_table_header(
 	size_t min_dashes = 3;
 
 	if (HOEDOWN_EXT_GFM & doc->ext_flags) {
-		// UMU: GFM allows 2 dashes
-		min_dashes = 2;
+		// UMU: GFM allows 1 dashes
+		min_dashes = 1;
 	}
 
 	pipes = 0;
@@ -3271,6 +3271,7 @@ parse_table_header(
 		under_end++;
 
 	for (col = 0; col < *columns && i < under_end; ++col) {
+		size_t colons = 0;
 		size_t dashes = 0;
 
 		while (i < under_end && data[i] == ' ')
@@ -3278,7 +3279,8 @@ parse_table_header(
 
 		if (i < under_end && data[i] == ':') {
 			i++; (*column_data)[col] |= HOEDOWN_TABLE_ALIGN_LEFT;
-			dashes++;
+			// UMU
+			colons++;
 		}
 
 		while (i < under_end && data[i] == '-') {
@@ -3287,7 +3289,8 @@ parse_table_header(
 
 		if (i < under_end && data[i] == ':') {
 			i++; (*column_data)[col] |= HOEDOWN_TABLE_ALIGN_RIGHT;
-			dashes++;
+			// UMU
+			colons++;
 		}
 
 		while (i < under_end && data[i] == ' ')
@@ -3296,7 +3299,8 @@ parse_table_header(
 		if (i < under_end && data[i] != '|' && data[i] != '+')
 			break;
 
-		if (dashes < min_dashes)
+		// UMU
+		if (dashes < 1 || colons + dashes < min_dashes)
 			break;
 
 		i++;

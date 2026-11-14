@@ -38,7 +38,8 @@
 #define ID_SHOW_VIEWS                   32780
 #define ID_RENDERER_CMARK_GFM           32781
 #define ID_RENDERER_HOEDOWN             32782
-#define ID_RENDERER_MD4C                32783
+#define ID_RENDERER_LOWDOWN             32783
+#define ID_RENDERER_MD4C                32784
 #define ID_THEME_LIGHT                  32791
 #define ID_THEME_DARK                   32792
 #define ID_THEME_GREEN                  32793
@@ -46,6 +47,7 @@
 #define ID_THEME_VSCODE                 32795
 #define ID_TOOL_AUTOLINKS               32801
 #define ID_TOOL_REGISTER                32802
+#define ID_TOOL_SETASSINGLETON          32803
 #define ID_OPEN_IN_EXPLORER             32811
 #define ID_OPEN_IN_NOTEPAD              32812
 #define ID_COPY_FULL_PATH               32813

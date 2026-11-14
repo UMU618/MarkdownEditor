@@ -110,6 +110,7 @@ BEGIN
         BEGIN
             MENUITEM "&cmark-gfm",                  ID_RENDERER_CMARK_GFM
             MENUITEM "&hoextdown",                  ID_RENDERER_HOEDOWN
+            MENUITEM "&lowdown",                    ID_RENDERER_LOWDOWN
             MENUITEM "&MD4C",                       ID_RENDERER_MD4C
         END
         MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
@@ -123,6 +124,7 @@ BEGIN
             MENUITEM "&VSCode",                     ID_THEME_VSCODE
         END
         MENUITEM "Register File &Associations", ID_TOOL_REGISTER
+        MENUITEM "Set as &Singleton",           ID_TOOL_SETASSINGLETON
     END
     POPUP "&Help"
     BEGIN
@@ -507,11 +509,11 @@ BEGIN
     ID_DOCUMENT_CLOSE_ALL   "Close all documents"
     ID_RENDERER_CMARK_GFM   "https://github.com/github/cmark-gfm"
     ID_RENDERER_HOEDOWN     "https://github.com/kjdev/hoextdown"
-    ID_RENDERER_MD4C        "https://github.com/mity/md4c"
 END
 
 STRINGTABLE
 BEGIN
+    ID_RENDERER_MD4C        "https://github.com/mity/md4c"
     ID_THEME_LIGHT          "Light Theme"
     ID_THEME_DARK           "Dark Theme"
     ID_THEME_GREEN          "Green Theme"

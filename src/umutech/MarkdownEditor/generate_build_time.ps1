@@ -1,5 +1,5 @@
 $now = Get-Date
-$outPath = "res\build_time.h"
+$outPath = Join-Path $PSScriptRoot "res\build_time.h"
 
 $content = @"
 #define BUILD_YEAR $($now.Year)
@@ -10,4 +10,3 @@ $content = @"
 "@
 
 $content | Out-File -FilePath $outPath -Encoding utf8 -NoNewline
-

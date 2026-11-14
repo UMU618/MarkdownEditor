@@ -9,6 +9,7 @@
   <Folder Name="/libs/">
     <Project Path="detours/detours.vcxproj" Id="87f49854-f5c0-4c7e-9168-94396bbe81a9" />
     <Project Path="hoextdown/hoextdown.vcxproj" Id="06b3798d-969c-441e-9b33-a6083f08e06a" />
+    <Project Path="lowdown/lowdown.vcxproj" Id="07a2fd52-a1ad-4b30-bf1c-6b4c4e6b57b6" />
   </Folder>
   <Project Path="MarkdownEditor/MarkdownEditor.vcxproj" Id="d13d03a8-503e-4838-b728-48c7e90ae420" />
 </Solution>

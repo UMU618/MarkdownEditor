@@ -53,8 +53,7 @@ typedef enum hoedown_extensions {
 	/* meta block */
 	HOEDOWN_EXT_META_BLOCK = (1 << 17),
 
-	/* UMU customization */
-  HOEDOWN_EXT_GFM = (1 << 18)
+  HOEDOWN_EXT_GFM = (1 << 22)
 } hoedown_extensions;
 
 #define HOEDOWN_EXT_BLOCK (\

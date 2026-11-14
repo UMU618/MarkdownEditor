@@ -141,11 +141,14 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -167,11 +170,14 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -195,11 +201,14 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -223,7 +232,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <Optimization>Full</Optimization>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
@@ -260,11 +269,14 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
       <ExceptionHandling>false</ExceptionHandling>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatAngleIncludeAsExternal>true</TreatAngleIncludeAsExternal>
+      <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <DisableAnalyzeExternal>true</DisableAnalyzeExternal>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -288,7 +300,7 @@
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
       <TreatWarningAsError>true</TreatWarningAsError>
@@ -361,6 +373,9 @@
     </ProjectReference>
     <ProjectReference Include="..\hoextdown\hoextdown.vcxproj">
       <Project>{06b3798d-969c-441e-9b33-a6083f08e06a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\lowdown\lowdown.vcxproj">
+      <Project>{07a2fd52-a1ad-4b30-bf1c-6b4c4e6b57b6}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

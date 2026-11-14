@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="h">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="src\compat">
+      <UniqueIdentifier>{610c97dd-1049-4513-bbfa-09bebbe32ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\compat\sys">
+      <UniqueIdentifier>{17dbd1ff-26ca-4bdf-b168-b13425766ccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\format">
+      <UniqueIdentifier>{d83a0dd8-e8a2-428c-8148-e51e0eeacfd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\format\html">
+      <UniqueIdentifier>{76d37e95-cd25-4780-9a83-15b1a345f9ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\parse">
+      <UniqueIdentifier>{e91473d5-b546-42f9-822d-4a8a007d5f76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\third_party\lowdown\src\lowdown.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lowdown\compat\sys\queue.h">
+      <Filter>src\compat\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lowdown\src\extern.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\third_party\lowdown\src\parse\parse.h">
+      <Filter>src\parse</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\third_party\lowdown\compat\msvc.c">
+      <Filter>src\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\buffer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\format\util.c">
+      <Filter>src\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\format\template.c">
+      <Filter>src\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\compats.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\format\entity.c">
+      <Filter>src\format</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\parse\autolink.c">
+      <Filter>src\parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\parse\document.c">
+      <Filter>src\parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\parse\ext_attrs.c">
+      <Filter>src\parse</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\format\html\html.c">
+      <Filter>src\format\html</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third_party\lowdown\src\format\html\html_escape.c">
+      <Filter>src\format\html</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
