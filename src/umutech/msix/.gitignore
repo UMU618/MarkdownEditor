@@ -1,0 +1,13 @@
+# 构建中间目录
+build/
+
+# 打包产物
+*.msix
+*.appx
+*.appxbundle
+*.msixbundle
+*.msixupload
+
+# 自签名证书（运行时生成）
+*.pfx
+*.cer

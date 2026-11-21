@@ -11,6 +11,7 @@
 #define IDR_HTML                        132
 #define ID_EDIT_MODE                    133
 #define ID_FILE_ENCODE                  134
+#define ID_CARET                        135
 #define IDR_CSS_LIGHT                   201
 #define IDR_CSS_DARK                    202
 #define IDR_CSS_GREEN                   203
@@ -20,6 +21,7 @@
 #define IDR_TAB_MENU                    222
 #define IDR_TOOLBAR_MENU                223
 #define IDD_BASE_DIRECTORY              224
+#define IDR_EDIT_MENU                   225
 #define IDC_SYSLINK_FEEDBACK            1000
 #define IDC_VERSION                     1001
 #define IDC_HTML_RENDERER               1002
@@ -45,9 +47,11 @@
 #define ID_THEME_GREEN                  32793
 #define ID_THEME_YELLOW                 32794
 #define ID_THEME_VSCODE                 32795
+#define ID_THEME_CUSTOM                 32800
 #define ID_TOOL_AUTOLINKS               32801
 #define ID_TOOL_REGISTER                32802
 #define ID_TOOL_SETASSINGLETON          32803
+#define ID_TOOL_PREVIEWMODE             32804
 #define ID_OPEN_IN_EXPLORER             32811
 #define ID_OPEN_IN_NOTEPAD              32812
 #define ID_COPY_FULL_PATH               32813
@@ -55,19 +59,20 @@
 #define ID_COPY_DIRECTORY_PATH          32815
 #define ID_TABHEADER_CLOSE_OTHERS       32816
 #define ID_TABHEADER_CLOSE_UNCHANGED    32817
-#define ID_VIEW_LOCK_TOOLBARS           32818
+#define ID_VIEW_LOCK_REBAR_BANDS        32818
 #define ID_OPEN_IN_CMD                  32819
 #define ID_OPEN_IN_PWSH                 32820
 #define ID_VIEW_SYNCHRONOUSSCROLLING    32821
 #define ID_VIEW_MENUBAR                 32822
 #define ID_SET_BASE_DIRECTORY           32823
+#define ID_THEME_CUSTOM32824            32824
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        225
-#define _APS_NEXT_COMMAND_VALUE         32824
+#define _APS_NEXT_RESOURCE_VALUE        226
+#define _APS_NEXT_COMMAND_VALUE         32825
 #define _APS_NEXT_CONTROL_VALUE         1006
 #define _APS_NEXT_SYMED_VALUE           101
 #endif

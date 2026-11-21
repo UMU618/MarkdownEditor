@@ -33,7 +33,7 @@ BEGIN
         MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         MENUITEM SEPARATOR
-        MENUITEM "&Lock Toolbars",              ID_VIEW_LOCK_TOOLBARS
+        MENUITEM "&Lock Rebar Bands",           ID_VIEW_LOCK_REBAR_BANDS
     END
 END
 
@@ -86,7 +86,7 @@ BEGIN
         MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
         MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
         MENUITEM SEPARATOR
-        MENUITEM "&Lock Toolbars",              ID_VIEW_LOCK_TOOLBARS
+        MENUITEM "&Lock Rebar Bands",           ID_VIEW_LOCK_REBAR_BANDS
         MENUITEM SEPARATOR
         MENUITEM "&Edit\tCtrl+E",               ID_VIEW_EDIT
         MENUITEM "&Preview",                    ID_VIEW_PREVIEW
@@ -115,6 +115,8 @@ BEGIN
         END
         MENUITEM "&Auto Links",                 ID_TOOL_AUTOLINKS
         MENUITEM SEPARATOR
+        MENUITEM "&Preview Mode",               ID_TOOL_PREVIEWMODE
+        MENUITEM "Set as &Singleton",           ID_TOOL_SETASSINGLETON
         POPUP "&Theme"
         BEGIN
             MENUITEM "&Light",                      ID_THEME_LIGHT
@@ -122,9 +124,11 @@ BEGIN
             MENUITEM "&Green",                      ID_THEME_GREEN
             MENUITEM "&Yellow",                     ID_THEME_YELLOW
             MENUITEM "&VSCode",                     ID_THEME_VSCODE
+            MENUITEM SEPARATOR
+            MENUITEM "Custom",                      ID_THEME_CUSTOM
         END
+        MENUITEM SEPARATOR
         MENUITEM "Register File &Associations", ID_TOOL_REGISTER
-        MENUITEM "Set as &Singleton",           ID_TOOL_SETASSINGLETON
     END
     POPUP "&Help"
     BEGIN
@@ -161,6 +165,22 @@ BEGIN
             MENUITEM "Copy File&name",              ID_COPY_FILENAME
             MENUITEM "Copy &Directory Path",        ID_COPY_DIRECTORY_PATH
         END
+    END
+END
+
+IDR_EDIT_MENU MENU
+BEGIN
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
     END
 END
 
@@ -421,6 +441,7 @@ BEGIN
                             "The file associations has been successfully removed."
     ID_EDIT_MODE            "OVR"
     ID_FILE_ENCODE          "UTF-8 with BOM"
+    ID_CARET                "Ln: xxxxxx, Ch: xxxx"
 END
 
 STRINGTABLE
@@ -509,6 +530,7 @@ BEGIN
     ID_DOCUMENT_CLOSE_ALL   "Close all documents"
     ID_RENDERER_CMARK_GFM   "https://github.com/github/cmark-gfm"
     ID_RENDERER_HOEDOWN     "https://github.com/kjdev/hoextdown"
+    ID_RENDERER_LOWDOWN     "https://github.com/kristapsdz/lowdown"
 END
 
 STRINGTABLE
@@ -528,12 +550,16 @@ END
 
 STRINGTABLE
 BEGIN
+    ID_TOOL_AUTOLINKS       "Enable auto link when rendering markdown"
     ID_TOOL_REGISTER        "Register File Associations (*.md; *.markdown)"
+    ID_TOOL_SETASSINGLETON  "Set this instance as singleton"
+    ID_TOOL_PREVIEWMODE     "Set mode to preview or edit for this instance"
     ID_OPEN_IN_EXPLORER     "Show in Enclosing Folder"
 END
 
 STRINGTABLE
 BEGIN
+    ID_VIEW_LOCK_REBAR_BANDS "Lock or unlock rebar bands"
     ID_VIEW_SYNCHRONOUSSCROLLING 
                             "When the scroll edit panel, the preview panel is scrolled synchronously."
     ID_VIEW_MENUBAR         "Show or hide the menu bar\nToggle MenuBar"

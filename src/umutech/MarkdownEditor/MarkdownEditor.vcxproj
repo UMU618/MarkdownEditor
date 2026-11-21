@@ -114,6 +114,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MTRelease|x64'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
@@ -122,6 +123,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MTRelease|ARM64'">
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>true</VcpkgEnabled>
@@ -257,6 +259,12 @@
     <ResourceCompile>
       <AdditionalIncludeDirectories>..\umu\include\</AdditionalIncludeDirectories>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>signtool.exe sign /sha1 ff8a8160116e35775506d0dd86360935877aaf3b /fd SHA512 /td SHA512 /tr http://timestamp.digicert.com/ $(TargetPath)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Sign</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -320,15 +328,24 @@
     <ResourceCompile>
       <AdditionalIncludeDirectories>..\umu\include\</AdditionalIncludeDirectories>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>signtool.exe sign /sha1 ff8a8160116e35775506d0dd86360935877aaf3b /fd SHA512 /td SHA512 /tr http://timestamp.digicert.com/ $(TargetPath)</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Sign</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="res\resource.h" />
     <ClInclude Include="src\about_dialog.h" />
     <ClInclude Include="src\app.h" />
     <ClInclude Include="src\base_directory_dialog.h" />
+    <ClInclude Include="src\data_path.h" />
     <ClInclude Include="src\documents_dialog.h" />
     <ClInclude Include="src\edit_panel.h" />
+    <ClInclude Include="src\env.h" />
     <ClInclude Include="src\events_handler.h" />
+    <ClInclude Include="src\filesystem.h" />
     <ClInclude Include="src\find_replace_dialog.h" />
     <ClInclude Include="src\main_frame.h" />
     <ClInclude Include="src\pch.h" />
@@ -341,9 +358,12 @@
     <ClCompile Include="src\about_dialog.cpp" />
     <ClCompile Include="src\app.cpp" />
     <ClCompile Include="src\base_directory_dialog.cpp" />
+    <ClCompile Include="src\data_path.cpp" />
     <ClCompile Include="src\documents_dialog.cpp" />
     <ClCompile Include="src\edit_panel.cpp" />
+    <ClCompile Include="src\env.cpp" />
     <ClCompile Include="src\events_handler.cpp" />
+    <ClCompile Include="src\filesystem.cpp" />
     <ClCompile Include="src\find_replace_dialog.cpp" />
     <ClCompile Include="src\main_frame.cpp" />
     <ClCompile Include="src\markdown_editor.cpp" />

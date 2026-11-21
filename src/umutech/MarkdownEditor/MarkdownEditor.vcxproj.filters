@@ -57,6 +57,15 @@
     <ClInclude Include="src\documents_dialog.h">
       <Filter>h</Filter>
     </ClInclude>
+    <ClInclude Include="src\data_path.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\env.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\filesystem.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pch.cpp">
@@ -96,6 +105,15 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\base_directory_dialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\data_path.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\env.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filesystem.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
