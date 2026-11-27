@@ -70,6 +70,16 @@ BEGIN
         MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
         MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
         MENUITEM SEPARATOR
+        MENUITEM "&Bold",                       ID_EDIT_BOLD
+        MENUITEM "&Italic",                     ID_EDIT_ITALIC
+        MENUITEM "&Underline",                  ID_EDIT_UNDERLINE
+        MENUITEM "&Strikethrough",              ID_EDIT_STRIKETHROUGH
+        POPUP "Insert..."
+        BEGIN
+            MENUITEM "&Image",                      ID_INSERT_IMAGE
+            MENUITEM "&Link",                       ID_INSERT_LINK
+            MENUITEM "&Table",                      ID_INSERT_TABLE
+        END
         MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
         MENUITEM SEPARATOR
         MENUITEM "&Font...",                    ID_FORMAT_FONT
@@ -132,6 +142,9 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
+        MENUITEM "&Help",                       ID_HELP
+        MENUITEM "&License",                    ID_HELP_LICENSE
+        MENUITEM SEPARATOR
         MENUITEM "&About MarkdownEditor",       ID_APP_ABOUT
     END
 END
@@ -180,6 +193,17 @@ BEGIN
         MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
         MENUITEM "&Delete\tDel",                ID_EDIT_CLEAR
         MENUITEM SEPARATOR
+        MENUITEM "&Bold",                       ID_EDIT_BOLD
+        MENUITEM "&Italic",                     ID_EDIT_ITALIC
+        MENUITEM "&Underline",                  ID_EDIT_UNDERLINE
+        MENUITEM "&Strikethrough",              ID_EDIT_STRIKETHROUGH
+        POPUP "Insert..."
+        BEGIN
+            MENUITEM "&Image",                      ID_INSERT_IMAGE
+            MENUITEM "&Link",                       ID_INSERT_LINK
+            MENUITEM "&Table",                      ID_INSERT_TABLE
+        END
+        MENUITEM SEPARATOR
         MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
     END
 END
@@ -193,6 +217,8 @@ END
 IDR_TABTOOLBAR          BITMAP                  "tab_toolbar.bmp"
 
 IDR_MAINFRAME           BITMAP                  "toolbar.bmp"
+
+IDR_MARKDOWN            BITMAP                  "markdown.bmp"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -260,6 +286,14 @@ BEGIN
     BUTTON      ID_DOCUMENT_CLOSE
 END
 
+IDR_MARKDOWN TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_EDIT_BOLD
+    BUTTON      ID_EDIT_ITALIC
+    BUTTON      ID_EDIT_UNDERLINE
+    BUTTON      ID_EDIT_STRIKETHROUGH
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -292,26 +326,41 @@ BEGIN
     LTEXT           "HTML Renderer: WebBrowser",IDC_HTML_RENDERER,7,77,133,8
 END
 
-IDD_DOCUMENTS DIALOGEX 0, 0, 342, 195
-STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+IDD_DOCUMENTS DIALOGEX 0, 0, 310, 169
+STYLE DS_SETFONT | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
 CAPTION "Windows"
-FONT 8, "MS Shell Dlg", 0, 0, 0x0
+FONT 9, "Segoe UI", 400, 0, 0x0
 BEGIN
-    LISTBOX         IDC_LIST,7,7,255,181,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
-    DEFPUSHBUTTON   "&Activate",IDOK,267,7,68,14
-    PUSHBUTTON      "&Close Window(s)",IDCLOSE,267,26,68,14
+    LISTBOX         IDC_LIST,7,7,223,155,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Activate",IDOK,235,7,68,14
+    PUSHBUTTON      "&Close Window(s)",IDCLOSE,235,26,68,14
 END
 
-IDD_BASE_DIRECTORY DIALOGEX 0, 0, 288, 52
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_BASE_DIRECTORY DIALOGEX 0, 0, 220, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Base Directory"
-FONT 8, "MS Shell Dlg", 400, 0, 0x1
+FONT 9, "Segoe UI", 400, 0, 0x0
 BEGIN
-    EDITTEXT        IDC_EDIT_BASE_DIRECTORY,7,7,256,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "↑",IDC_PARENT,267,7,14,14
-    DEFPUSHBUTTON   "&OK",IDOK,121,31,50,14
-    PUSHBUTTON      "&Cancel",IDCANCEL,176,31,50,14
-    PUSHBUTTON      "&Browse",IDC_BROWSE,231,31,50,14
+    EDITTEXT        IDC_EDIT_BASE_DIRECTORY,7,7,190,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "↑",IDC_PARENT,199,7,14,14
+    DEFPUSHBUTTON   "&OK",IDOK,55,31,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,109,31,50,14
+    PUSHBUTTON      "&Browse",IDC_BROWSE,163,31,50,14
+END
+
+IDD_TABLE_DIALOG DIALOGEX 0, 0, 214, 72
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Insert table"
+FONT 9, "Segoe UI", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_COLUMNS,17,24,51,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_COLUMNS,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,67,24,12,14
+    EDITTEXT        IDC_EDIT_LINES,136,24,51,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_LINES,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,186,24,12,14
+    DEFPUSHBUTTON   "&OK",IDOK,82,52,50,14
+    GROUPBOX        "Number of Columns",IDC_STATIC,7,7,81,40
+    CTEXT           "X",IDC_STATIC,103,24,8,8,SS_CENTERIMAGE
+    GROUPBOX        "Number of Lines",IDC_STATIC,126,7,81,40
 END
 
 
@@ -334,17 +383,25 @@ BEGIN
     IDD_DOCUMENTS, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 335
+        RIGHTMARGIN, 303
         TOPMARGIN, 7
-        BOTTOMMARGIN, 188
+        BOTTOMMARGIN, 162
     END
 
     IDD_BASE_DIRECTORY, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 281
+        RIGHTMARGIN, 213
         TOPMARGIN, 7
         BOTTOMMARGIN, 45
+    END
+
+    IDD_TABLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -389,6 +446,10 @@ END
 
 IDR_HTML                HTML                    "preview.htm"
 
+ID_HELP_LICENSE         HTML                    "license.md"
+
+ID_HELP                 HTML                    "help.md"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -422,6 +483,11 @@ BEGIN
 END
 
 IDD_BASE_DIRECTORY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_TABLE_DIALOG AFX_DIALOG_LAYOUT
 BEGIN
     0
 END
@@ -461,6 +527,7 @@ STRINGTABLE
 BEGIN
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP                 "Help"
 END
 
 STRINGTABLE
@@ -554,6 +621,7 @@ BEGIN
     ID_TOOL_REGISTER        "Register File Associations (*.md; *.markdown)"
     ID_TOOL_SETASSINGLETON  "Set this instance as singleton"
     ID_TOOL_PREVIEWMODE     "Set mode to preview or edit for this instance"
+    ID_HELP_LICENSE         "License"
     ID_OPEN_IN_EXPLORER     "Show in Enclosing Folder"
 END
 
@@ -564,6 +632,10 @@ BEGIN
                             "When the scroll edit panel, the preview panel is scrolled synchronously."
     ID_VIEW_MENUBAR         "Show or hide the menu bar\nToggle MenuBar"
     ID_SET_BASE_DIRECTORY   "Set base directory for this document"
+    ID_EDIT_BOLD            "Bold"
+    ID_EDIT_ITALIC          "Italic"
+    ID_EDIT_UNDERLINE       "Underline"
+    ID_EDIT_STRIKETHROUGH   "Strikethrough"
 END
 
 #endif    // English (United States) resources

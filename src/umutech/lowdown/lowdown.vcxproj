@@ -1046,7 +1046,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <Optimization>Disabled</Optimization>
@@ -1094,7 +1094,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1116,7 +1116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -1177,7 +1177,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <Optimization>Disabled</Optimization>
@@ -1225,7 +1225,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ExceptionHandling>false</ExceptionHandling>
@@ -1247,7 +1247,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>..\..\third_party\lowdown\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src;..\..\third_party\lowdown\src\format</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>

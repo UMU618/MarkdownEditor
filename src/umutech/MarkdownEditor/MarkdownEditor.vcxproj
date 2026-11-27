@@ -140,7 +140,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -169,7 +169,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -200,7 +200,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -231,7 +231,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -274,7 +274,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -305,7 +305,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NOMINMAX;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>.\;..\dry\include\;..\umu\include\;..\..\;..\..\third_party\detours\src\;..\..\third_party\lowdown\compat;..\..\third_party\lowdown\src\</AdditionalIncludeDirectories>
@@ -347,6 +347,7 @@
     <ClInclude Include="src\events_handler.h" />
     <ClInclude Include="src\filesystem.h" />
     <ClInclude Include="src\find_replace_dialog.h" />
+    <ClInclude Include="src\insert_table_dialog.h" />
     <ClInclude Include="src\main_frame.h" />
     <ClInclude Include="src\pch.h" />
     <ClInclude Include="src\splitter.h" />
@@ -365,6 +366,7 @@
     <ClCompile Include="src\events_handler.cpp" />
     <ClCompile Include="src\filesystem.cpp" />
     <ClCompile Include="src\find_replace_dialog.cpp" />
+    <ClCompile Include="src\insert_table_dialog.cpp" />
     <ClCompile Include="src\main_frame.cpp" />
     <ClCompile Include="src\markdown_editor.cpp" />
     <ClCompile Include="src\pch.cpp">
@@ -383,6 +385,7 @@
     <ResourceCompile Include="res\MarkdownEditor.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\markdown.bmp" />
     <Image Include="res\MarkdownEditor.ico" />
     <Image Include="res\tab_toolbar.bmp" />
     <Image Include="res\toolbar.bmp" />
@@ -401,6 +404,10 @@
   <ItemGroup>
     <None Include="res\dark.css" />
     <None Include="res\green.css" />
+    <None Include="res\help.md" />
+    <None Include="res\license.md">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
     <None Include="res\light.css" />
     <None Include="res\mde.rgs" />
     <None Include="res\preview.htm">

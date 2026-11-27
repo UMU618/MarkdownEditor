@@ -22,6 +22,8 @@
 #define IDR_TOOLBAR_MENU                223
 #define IDD_BASE_DIRECTORY              224
 #define IDR_EDIT_MENU                   225
+#define IDR_MARKDOWN                    226
+#define IDD_TABLE_DIALOG                227
 #define IDC_SYSLINK_FEEDBACK            1000
 #define IDC_VERSION                     1001
 #define IDC_HTML_RENDERER               1002
@@ -29,6 +31,10 @@
 #define IDC_EDIT_BASE_DIRECTORY         1004
 #define IDC_BROWSE                      1005
 #define IDC_PARENT                      1006
+#define IDC_EDIT_COLUMNS                1007
+#define IDC_EDIT_LINES                  1008
+#define IDC_SPIN_COLUMNS                1009
+#define IDC_SPIN_LINES                  1010
 #define ID_FILE_RECENTFILES_CLEAR       32772
 #define ID_VIEW_EDIT                    32773
 #define ID_VIEW_PREVIEW                 32774
@@ -52,6 +58,7 @@
 #define ID_TOOL_REGISTER                32802
 #define ID_TOOL_SETASSINGLETON          32803
 #define ID_TOOL_PREVIEWMODE             32804
+#define ID_HELP_LICENSE                 32805
 #define ID_OPEN_IN_EXPLORER             32811
 #define ID_OPEN_IN_NOTEPAD              32812
 #define ID_COPY_FULL_PATH               32813
@@ -65,15 +72,21 @@
 #define ID_VIEW_SYNCHRONOUSSCROLLING    32821
 #define ID_VIEW_MENUBAR                 32822
 #define ID_SET_BASE_DIRECTORY           32823
-#define ID_THEME_CUSTOM32824            32824
+#define ID_EDIT_BOLD                    32824
+#define ID_EDIT_ITALIC                  32825
+#define ID_EDIT_UNDERLINE               32827
+#define ID_EDIT_STRIKETHROUGH           32828
+#define ID_INSERT_IMAGE                 32829
+#define ID_INSERT_LINK                  32830
+#define ID_INSERT_TABLE                 32831
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        226
-#define _APS_NEXT_COMMAND_VALUE         32825
-#define _APS_NEXT_CONTROL_VALUE         1006
+#define _APS_NEXT_RESOURCE_VALUE        228
+#define _APS_NEXT_COMMAND_VALUE         32832
+#define _APS_NEXT_CONTROL_VALUE         1011
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

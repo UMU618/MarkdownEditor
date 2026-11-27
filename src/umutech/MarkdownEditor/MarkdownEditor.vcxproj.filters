@@ -64,7 +64,10 @@
       <Filter>h</Filter>
     </ClInclude>
     <ClInclude Include="src\filesystem.h">
-      <Filter>src</Filter>
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\insert_table_dialog.h">
+      <Filter>h</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,9 @@
     <ClCompile Include="src\filesystem.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\insert_table_dialog.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="res\MarkdownEditor.rc">
@@ -130,6 +136,9 @@
       <Filter>res</Filter>
     </Image>
     <Image Include="res\tab_toolbar.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\markdown.bmp">
       <Filter>res</Filter>
     </Image>
   </ItemGroup>
@@ -153,6 +162,12 @@
       <Filter>res</Filter>
     </None>
     <None Include="res\vscode.css">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\license.md">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\help.md">
       <Filter>res</Filter>
     </None>
   </ItemGroup>
